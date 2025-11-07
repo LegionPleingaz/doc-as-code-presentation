@@ -5,8 +5,63 @@
   <title>Documentation as Code — Présentation CODIR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- REVEAL CORE -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css" id="theme">
+
+  <style>
+    :root {
+      /* palette */
+      --bleu-moyen: #1057C8;
+      --bleu-clair: #1089FF;
+      --orange-fonce: #FE5815;
+      --orange-moyen: #FF861D;
+      --orange-clair: #FFB210;
+      --gris-clair: #E0E0E0;
+      --gris-tres-clair: #F8F7F7;
+      --gris-fonce: #333333;
+      --vert-fonce: #4F9E30;
+      --vert-moyen: #88D910;
+      --vert-clair: #C0E410;
+
+      --couleur-texte: var(--gris-fonce);
+      --couleur-fond: var(--gris-tres-clair);
+      --accent: var(--bleu-moyen);
+    }
+
+    body {
+      background: var(--couleur-fond) !important;
+      color: var(--couleur-texte) !important;
+    }
+
+    .reveal h1, .reveal h2, .reveal h3 {
+      color: var(--accent) !important;
+      font-weight: 700;
+    }
+
+    .reveal strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .reveal a {
+      color: var(--accent) !important;
+      text-decoration: underline;
+    }
+
+    /* bullets */
+    .reveal ul li {
+      margin: 0.6rem 0;
+    }
+
+    /* slide number */
+    .reveal .slide-number {
+      background: var(--accent) !important;
+      color: white !important;
+      border-radius: 4px;
+      padding: 2px 8px;
+    }
+  </style>
 </head>
 <body>
   <div class="reveal">
@@ -25,6 +80,7 @@
     Reveal.initialize({
       hash: true,
       slideNumber: true,
+      pdfSeparateFragments: false,
       plugins: [ RevealMarkdown ]
     });
   </script>
